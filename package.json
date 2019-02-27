@@ -1,0 +1,67 @@
+{
+  "name": "eslint-config-cool",
+  "version": "0.0.1",
+  "description": "Cool's ESLint config, following our styleguide",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RJAVA1990/eslint-config-cool"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "cool",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "author": "Xuheng Liu (liuxuheng1990@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RJAVA1990/eslint-config-cool/issues"
+  },
+  "homepage": "https://github.com/RJAVA1990/eslint-config-cool",
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,sass,scss,less,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-config-airbnb": "^17.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^5.2.6",
+    "@commitlint/config-angular": "^5.1.1",
+    "commitizen": "^2.9.6",
+    "eslint": "^4.9.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7"
+  },
+  "peerDependencies": {
+    "eslint": "^4.19.1 || ^5.3.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
