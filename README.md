@@ -6,11 +6,7 @@ This package provides cool's .eslintrc as an extensible shared config.
 
 ## Usage
 
-We export three ESLint configurations for your usage.
-
-### eslint-config-cool
-
-Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y`. If you don't need React, see [eslint-config-cool-base](https://npmjs.com/eslint-config-cool-base).
+Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y`.  Based on `eslint-config-airbnb`.
 
 1. Install the correct versions of each package, which are listed by the command:
 
@@ -55,27 +51,3 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+ and
   ```
 
 2. Add `"extends": "cool"` to your .eslintrc
-
-### eslint-config-cool/whitespace
-
-This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/cool/javascript/blob/master/packages/eslint-config-cool/whitespace.js).
-
-### eslint-config-cool/base
-
-This entry point is deprecated. See [eslint-config-cool-base](https://npmjs.com/eslint-config-cool-base).
-
-### eslint-config-cool/legacy
-
-This entry point is deprecated. See [eslint-config-cool-base](https://npmjs.com/eslint-config-cool-base).
-
-See [cool's Javascript styleguide](https://github.com/cool/javascript) and
-the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)
-for more information.
-
-## Improving this config
-
-Consider adding test cases if you're making complicated rules changes, like anything involving regexes. Perhaps in a distant future, we could use literate programming to structure our README as test cases for our .eslintrc?
-
-You can run tests with `npm test`.
-
-You can make sure this module lints with itself using `npm run lint`.
