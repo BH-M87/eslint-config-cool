@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['eslint-config-airbnb'].map(require.resolve),
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   settings: {
     'import/resolver': {
       node: {
@@ -13,6 +13,8 @@ module.exports = {
     es6: true,
   },
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'spaced-comment': [0],
     'class-methods-use-this': 0,
     'jsx-a11y/click-events-have-key-events': 0,
