@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cool",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Cool's ESLint config, following our styleguide",
   "main": "index.js",
   "repository": {
