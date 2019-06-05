@@ -1,13 +1,7 @@
 module.exports = {
   plugins: ["import", "react-hooks", "jsx-a11y", "react"],
   extends: ["airbnb", "prettier", "prettier/react"],
-  settings: {
-    "import/resolver": {
-      node: {
-        moduleDirectory: ["node_modules", "src"]
-      }
-    }
-  },
+  settings: {"import/resolver": { node: { moduleDirectory: ["node_modules", "src"] } }},
   env: {
     browser: true,
     es6: true,
@@ -43,9 +37,34 @@ module.exports = {
     // Use function hoisting to improve code readability
     "no-use-before-define": [
       "error",
-      { functions: false, classes: true, variables: true }
+      {
+        functions: false,
+        classes: true,
+        variables: true
+      }
     ],
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 5
+        },
+        ObjectPattern: {
+          multiline: true,
+          minProperties: 5
+        },
+        ImportDeclaration: {
+          multiline: true,
+          minProperties: 5
+        },
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 5
+        }
+      }
+    ]
   }
 };
