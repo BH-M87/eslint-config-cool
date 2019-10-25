@@ -26,9 +26,6 @@
     "url": "https://github.com/RJAVA1990/eslint-config-cool/issues"
   },
   "homepage": "https://github.com/RJAVA1990/eslint-config-cool",
-  "scripts": {
-    "precommit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
