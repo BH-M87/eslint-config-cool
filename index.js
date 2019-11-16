@@ -1,7 +1,9 @@
 module.exports = {
   plugins: ["import", "react-hooks", "jsx-a11y", "react"],
-  extends: ["airbnb", "prettier", "prettier/react"],
-  settings: {"import/resolver": { node: { moduleDirectory: ["node_modules", "src"] } }},
+  extends: ["airbnb", "plugin:prettier/recommended"],
+  settings: {
+    "import/resolver": { node: { moduleDirectory: ["node_modules", "src"] } }
+  },
   env: {
     browser: true,
     es6: true,
@@ -44,27 +46,6 @@ module.exports = {
       }
     ],
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-    "import/prefer-default-export": "off",
-    "object-curly-newline": [
-      "error",
-      {
-        ObjectExpression: {
-          multiline: true,
-          minProperties: 5
-        },
-        ObjectPattern: {
-          multiline: true,
-          minProperties: 5
-        },
-        ImportDeclaration: {
-          multiline: true,
-          minProperties: 5
-        },
-        ExportDeclaration: {
-          multiline: true,
-          minProperties: 5
-        }
-      }
-    ]
+    "import/prefer-default-export": "off"
   }
 };
